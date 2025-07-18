@@ -4,7 +4,11 @@
 // 17/10/2011
 //-----------------------------------------------------------
 
-#include "WProgram.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+#include <Arduino.h>
+#else
+#include <WProgram.h>
+#endif
 #include "FSM.h"
 
 #define DEBUGMODE	0
